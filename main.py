@@ -18,27 +18,30 @@ while True:
         s3=int(input("Enter Python marks:"))
 
         total=s1+s2+s3
-        print("Total Marks out of 300=",total)
-        
-        #percentage calculation
-        # percentage=total/3
-        # print(percentage)
-        maxixum_marks=300
-        percentage=(total/maxixum_marks)*100
-        print("Percentage=",percentage,"%")
-        
-        #grade assigning
-        if percentage >=75:
-            print("Grade 'A'")
-        elif percentage <75:
-            print("Grade 'B'")
-        elif percentage <60:
-            print("Grade 'C'")
-        elif percentage <40:
-            print("Fail")
+        if total >300:
+            print("Error!! check subject marks entered :(")
         else:
-            print("Error")
-    
+            print("Total Marks=",total,"/300")
+            
+             #percentage calculation
+             # percentage=total/3
+             # print(percentage)
+            maxixum_marks=300
+            percentage=(total/maxixum_marks)*100
+            print("Percentage=",percentage,"%")
+            
+            #grade assigning
+            if percentage >=75:
+                 grade="A"
+                        
+            elif percentage >=60:
+                grade="B"
+            elif percentage >=40:
+                grade="C"
+            else:
+                grade="Fail"
+            print("Grade",grade)
+           
     elif choice=="2":
         print("view Student selected")
     elif choice=="3":
