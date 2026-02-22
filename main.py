@@ -41,9 +41,33 @@ while True:
             else:
                 grade="Fail"
             print("Grade",grade)
+            
+            #store student data
+            student={"name":name,
+                     "marks":[s1,s2,s3],
+                     "percentage":percentage,
+                     "grade":grade}
+            
+            students.append(student)
+            print("Student data added successfully")
+            print(students)
            
     elif choice=="2":
         print("view Student selected")
+        
+        #checking if student data exists
+        if len(student)==0:
+            print("No data exists")
+        #printing student data
+        else:
+            for student in students:
+                print("Name",student["name"])
+                print("Makrs",student["marks"])
+                print("Percentage",student["percentage"])
+                print("Grade",student["grade"])
+                print("-----------------")
+                
+             
     elif choice=="3":
         break
     else:
